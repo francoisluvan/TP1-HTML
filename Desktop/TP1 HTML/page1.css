@@ -1,0 +1,25 @@
+img:hover {
+  opacity:0.6;
+}
+h1{
+text-shadow: 5px 5px 2px;}
+body {
+/* On initialise deux compteurs */
+    counter-reset: h1 h2 ; ﻿
+}
+h1:before {
+    content: counter(h1) "  " ;
+    counter-increment: h1 ;
+}
+h2:before {
+    /* On insére la numérotation sur deux niveaux */
+    content: counter(h1) "." counter(h2) "  " ;
+    counter-increment: h2 ;
+}
+h1 {
+    /* On réinitialise le compteur pour le niveau deux à chaque titre de niveau 1 */
+    counter-reset: h2;
+}
+p::first-letter {
+font-size:50px;
+}
